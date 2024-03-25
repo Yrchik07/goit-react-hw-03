@@ -8,6 +8,8 @@ import {
   minCharNumberValidation,
 } from '../../utils/constant';
 
+import css from '../ContactForm/ContactForm.module.css';
+
 const ContactFormSchema = yup.object().shape({
   name: yup
     .string()
@@ -44,7 +46,7 @@ const ContactForm = ({ onAddUser }) => {
       validationSchema={ContactFormSchema}
       onSubmit={handleSubmit}
     >
-      <Form>
+      <Form className={css.contactForm}>
         <label>
           <span>Name</span>
           <br />
