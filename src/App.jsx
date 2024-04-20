@@ -33,7 +33,7 @@ function App() {
     setFilter(event.target.value);
   };
   const filteredUsers = users.filter(user =>
-    user.name.toLowerCase().includes(filter.toLowerCase()),
+    user.name && user.name.toLowerCase().includes(filter.toLowerCase()),
   );
 
   return (
